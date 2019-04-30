@@ -1,0 +1,21 @@
+<!--<p>
+  articles works!
+</p>-->
+<div class="container">
+    <h2>Filtrer les articles</h2>
+    <input type="number" [(ngModel)]= "articlesFilter" placeholder="articles"/>
+    
+  <div ng-app="myApp" ng-controller="customersCtrl"> 
+    <li *ngFor="let cour of filteredArticles">
+    <table>
+      <tr ng-repeat="articles in Articles">
+        <td>{{ articles.while }}</td>
+        <td>{{ articles.poids }}</td>
+        <td>{{ articles.couleur }}</td>
+        <td>{{ articles.prix }}</td>
+        <td>{{ articles.description }}</td>
+      </tr>
+    </table>
+    </li>
+</div>
+</div>

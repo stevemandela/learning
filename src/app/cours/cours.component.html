@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Filtrer les cours</h2>
+    <input type="text" [(ngModel)]= "coursFilter" placeholder="cours"/>
+    
+    <ul>
+      
+      <li *ngFor="let cour of filteredCours"><span id="font">titre:</span> <a routerLink="/cours/{{cour.id}}">{{cour.titre | myPipe:'-'}}</a>  <br>date: {{ cour.date | date:'fullDate'}} <br>
+        contenu: {{cour.contenu}} <br>  Note: {{cour.note}} <br>
+        <!--<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, exercitationem! Adipisci facere in ad vitae rerum quae ratione incidunt animi, quis magnam iste! Totam, commodi cupiditate ullam explicabo necessitatibus molestiae.  </p>
+        
+        <div style="background-color:white;color:white;padding:20px;">
+          <h2>video</h2>
+            <iframe  width="400" height="300"  src="https://www.youtube.com/watch?v=IJHPpTYtIqk" ></iframe>
+        </div>  -->  
+        
+     <!-- enseignant: {{cour.enseignant.id}} <br> nom: {{cour.enseignant.nom}} <br>  prenom: {{cour.enseignant.prenom}} <br> email: {{cour.enseignant.email}} <br>
+      enseignant: {{cour.enseignant.enseignant}} <br>
+     
+        <ol>
+          <li *ngFor="let com of cour.commentaires"> <span id="font">commentaire:</span> <br>  Id: {{com.id}} <br> contenu: {{com.contenu}} <br> date: {{ com.date | date:'fullDate'}} <br>
+    
+         <!-- </li>
+          <li *ngFor="let com of cour.commentaires"> <span id="font">utilisateur:</span> <br>
+            nom: {{com.utilisateur.nom}} <br>  prenom: {{com.utilisateur.prenom}} <br>
+            email: {{com.utilisateur.email}} <br> enseignant: {{com.utilisateur.enseignant}}
+          </li>-->
+        
+        <!--</ol>-->
+       </li>
+      
+    </ul>
+    </div>
